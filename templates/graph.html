@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Rent Advisor - Graph</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: url("/static/background1.jpg") no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #ffffff;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        .plot-container {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            margin: auto;
+            max-width: 900px;
+        }
+
+        a {
+            margin-top: 20px;
+            display: inline-block;
+            color: white;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>📊 Rent Comparison Chart</h2>
+
+    <div class="plot-container">
+        {{ graph_html | safe }}
+    </div>
+
+    <a href="/">🏠 Back to Home</a>
+
+</body>
+</html>
